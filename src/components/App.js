@@ -10,11 +10,10 @@ const App = () => {
   const [neutral, setNautral] = useState(0);
   const [bad, setBad] = useState(0);
 
-  const handleFeedback = (e) => {
-    const { name } = e.target;
-    name === "good" && setGood(good + 1);
-    name === "neutral" && setNautral(neutral + 1);
-    name === "bad" && setBad(bad + 1);
+  const handleFeedback = (option) => {
+    option === "good" && setGood(good + 1);
+    option === "neutral" && setNautral(neutral + 1);
+    option === "bad" && setBad(bad + 1);
   };
 
   const countTotalFeedback = () => {
